@@ -20,8 +20,9 @@ def replaceDog(input):
     total=""
     while i<k:
         total=total+input[i:i+1]
+        i+=1
     total+='kitty'
-    total+=input[k+4]
+    total+=input[k+3:len(input)]
     
     modifiedString = total
 
@@ -39,3 +40,13 @@ if __name__ == "__main__":
 
     x = 'i have a dog and a goldfish as my pets'
     assert replaceDog(x) == 'i have a kitty and a goldfish as my pets'
+
+def test1():
+    x = 'my dog has fleas'
+    assert replaceDog(x) == 'my kitty has fleas'
+
+    x = 'i have a dog and a goldfish as my pets'
+    assert replaceDog(x) == 'i have a kitty and a goldfish as my pets'
+
+def main():
+    test1()

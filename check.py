@@ -1,4 +1,4 @@
-input = 'my dog has fleas'
+input = 'i have a dog and a goldfish as my pets'
 k=input.index('dog')
 i=0
 total=""
