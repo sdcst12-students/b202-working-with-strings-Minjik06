@@ -20,10 +20,23 @@ text=text1+text2
     
 print(text)"""
 
-input="There is a big balloon in the blue sky"
+"""input="There is a big balloon in the blue sky"
 mid=len(input)/2
 mid=int(mid)
 total1=input[0:mid]
 total2=input[mid:len(input)+1]
 totals=total1+"\n"+total2
-print(totals)
+print(totals)"""
+
+ranks = "A23456789TJQK"
+suits = "CDHS"
+lis=[""]
+x=0
+for i in range(len(ranks)):
+      for j in range(len(suits)):
+        k=ranks[i:i+1],suits[j:j+1]
+        lis.append(k)
+        x=x+1
+print(lis)
+
+

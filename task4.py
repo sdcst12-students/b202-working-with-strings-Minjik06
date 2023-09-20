@@ -7,8 +7,20 @@ Strings are iterable.  Use for loops to iterate through both strings to create a
 ranks = "A23456789TJQK"
 suits = "CDHS"
 
+
 def createDeck():
-  return 
+  lis=[]
+  x=0
+  """lis=[f"{i+j}" for i in len(ranks) for j in len(suits)]"""
+
+  lis=[]
+  x=0
+  for i in range(len(ranks)):
+      for j in range(len(suits)):
+        k=ranks[i:i+1]+suits[j:j+1]
+        lis.append(k)
+        x=x+1
+  return lis
 
 def main():
   deck = createDeck()
