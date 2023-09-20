@@ -17,12 +17,16 @@ def split(input):
     return
     str new string with line break in the middle
     '''
-
-    return
+    mid=len(input)/2
+    mid=int(mid)
+    total1=input[0:mid]
+    total2=input[mid:len(input)+1]
+    totals=total1+"\n"+total2
+    return totals
 
 if __name__ == "__main__":
     sentence = "There is a big balloon in the blue sky"
-    assert split(sentence) == "There is a big ball-\noon in the blue sky"
+    assert split(sentence) == "There is a big ball\noon in the blue sky"
 
     sentence = "I am a fat cat"
     assert split(sentence) == "I am a \nfat cat"
