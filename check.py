@@ -28,7 +28,7 @@ total2=input[mid:len(input)+1]
 totals=total1+"\n"+total2
 print(totals)"""
 
-ranks = "A23456789TJQK"
+"""ranks = "A23456789TJQK"
 suits = "CDHS"
 lis=[""]
 x=0
@@ -37,6 +37,14 @@ for i in range(len(ranks)):
         k=ranks[i:i+1],suits[j:j+1]
         lis.append(k)
         x=x+1
-print(lis)
+print(lis)"""
+
+string1="hello my name is minji and I like dog"
+count=0
+for i in range(len(string1)):
+  if string1[i:i+1]==" ":
+    count+=1
+wordc=count+1
+print(f"words : {wordc}, characters : {len(string1)}") 
 
 
