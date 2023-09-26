@@ -10,7 +10,7 @@ data = requests.get('https://sd.deltasd.bc.ca',timeout=None)
 
 data1 = data.text
 
-html1 = re.compile('< >')
+html1 = re.compile('<>')
 string1=re.sub(html1, '', data1)
 
 print(string1)
