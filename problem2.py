@@ -3,11 +3,25 @@
 Retrieve the contents of the sd.deltasd.bc.ca webpage.
 Remove all of the HTML and display just the real contents of the page.
 """
-import requests
-from bs4 import BeautifulSoup
 
-data = urllib.request.urlopen('https://sd.deltasd.bc.ca')
-print(data.read())
+
+
+import requests
+import json
+import re
+from bs4 import BeautifulSoup as bs
+
+def fn_RemoveHTML(sentence) :
+	sentence = re.sub('(<([^>]+)>)', '', sentence)
+	return sentence
+
+req = requests.get('https://sd.deltasd.bc.ca')
+data = req.text
+#print(data)
+
+data1=fn_RemoveHTML(data)
+print(data1)
+
 
 
 
