@@ -10,6 +10,7 @@ import requests
 import re
 
 def fn_RemoveHTML(sentence) :
+	sentence = re.sub('({([^>]+)})', '', sentence)
 	sentence = re.sub('(<([^>]+)>)', '', sentence)
 	return sentence
 
