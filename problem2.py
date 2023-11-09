@@ -7,9 +7,7 @@ Remove all of the HTML and display just the real contents of the page.
 
 
 import requests
-import json
 import re
-from bs4 import BeautifulSoup as bs
 
 def fn_RemoveHTML(sentence) :
 	sentence = re.sub('(<([^>]+)>)', '', sentence)
